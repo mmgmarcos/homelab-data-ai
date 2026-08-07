@@ -1,0 +1,30 @@
+# Environment
+.env
+.env.*
+
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+logs/
+*.log
+
+# Backups
+backups/
+
+# Data
+data/
+
+# Docker
+docker/
+
+# VS Code
+.vscode/
+
+# Linux
+.DS_Store
+Thumbs.db

@@ -1,0 +1,47 @@
+services:
+  service-name:
+
+    image: image:latest
+
+    container_name: service-name
+    hostname: service-name
+
+    restart: unless-stopped
+
+    env_file:
+      - .env
+
+    environment:
+      TZ: ${TZ}
+
+    ports:
+      - "0000:0000"
+
+    volumes:
+      - /dados/data/service-name:/data
+
+    networks:
+      - dados-net
+
+    healthcheck:
+      test: ["CMD", "true"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "5"
+
+    labels:
+      project: "homelab-data-ai"
+      service: "service-name"
+      maintainer: "Marcos"
+      environment: "production"
+
+networks:
+  dados-net:
+    external: true

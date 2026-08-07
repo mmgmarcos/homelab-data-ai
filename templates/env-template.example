@@ -1,0 +1,15 @@
+#########################################
+# HomeLab Data & AI
+#########################################
+
+TZ=America/Sao_Paulo
+
+SERVICE_NAME=
+
+SERVICE_PORT=
+
+USERNAME=
+
+PASSWORD=
+
+DATABASE=
